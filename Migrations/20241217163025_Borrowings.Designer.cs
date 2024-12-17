@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Salagean_Andrei_Lab2.Data;
 
@@ -11,9 +12,11 @@ using Salagean_Andrei_Lab2.Data;
 namespace Salagean_Andrei_Lab2.Migrations
 {
     [DbContext(typeof(Salagean_Andrei_Lab2Context))]
-    partial class Salagean_Andrei_Lab2ContextModelSnapshot : ModelSnapshot
+    [Migration("20241217163025_Borrowings")]
+    partial class Borrowings
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
